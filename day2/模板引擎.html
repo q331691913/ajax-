@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/template-web.js"></script>
+    <script src="js/jquery.js"></script>
+</head>
+
+<body>
+    <div class="content"></div>
+    <script type="text/html" id="moban">
+
+        <ul>
+            <li>{{name}}</li>
+            <li>{{age}}</li>
+            <li>{{sex}}</li>
+            <li>{{}}</li>
+
+        </ul>
+
+    </script>
+    <script>
+        let data = {
+            name: 'zs',
+            age: 18,
+            sex: '男'
+            hobby: {
+                ['写代码', '白天敲', '晚上敲', '敲代码太好了吧']
+            }
+        }
+        let set = template('moban', data)
+        $('.content').html(set)
+    </script>
+</body>
+
+</html>
