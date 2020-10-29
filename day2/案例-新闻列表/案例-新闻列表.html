@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="./assets/news.css" />
     <script src="./lib/jquery.js"></script>
     <script src="./lib/template-web.js"></script>
-    <script src="./js/press.js"></script>
+    <script src="js/press.js"></script>
 </head>
 
 <body>
@@ -17,6 +17,7 @@
     <div id="news-list">
 
     </div>
+
     <script type='text/html' id="moban">
         {{each data}}
         <div class="news-item">
@@ -32,7 +33,7 @@
                         <span>{{$value.source}}</span>&nbsp;&nbsp;
                         <span>{{$value.time|formatDate}}</span>
                     </div>
-                    <span>评论数：66</span>
+                    <span>评论数：{{$value.cmtcount}}</span>
                 </div>
             </div>
         </div>
